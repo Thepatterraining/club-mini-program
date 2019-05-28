@@ -1,0 +1,47 @@
+/* pages/active/active.wxss */
+
+page {
+    background-color: #ededed;
+  }
+  
+.user {
+    height: 80rpx;
+}
+
+.user image{
+    width: 80rpx;
+    height: 80rpx;
+    float: left;
+}
+
+.name {
+    float: left;
+    line-height: 80rpx;
+    padding-left: 15rpx;
+    font-size: 35rpx;
+}
+
+view {
+    width: 750rpx;
+    text-align: left;
+    padding: 0 10rpx;
+   
+  }
+
+  .icon {
+      width: 710rpx;
+      border-top: 3rpx solid #8a8a8a;
+  }
+
+  .icon image{
+      width: 350rpx;
+      height: 60rpx;
+  }
+
+  .imgs image{
+      width: 710rpx;
+  }
+
+  .content {
+      width: 700rpx;
+  }

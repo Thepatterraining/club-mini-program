@@ -1,0 +1,22 @@
+{
+  "name": "school_back",
+  "instances": 1,
+  "cwd": "./",
+  "merge_logs": true,
+  "error_file": "logs/err.log",
+  "out_file": "logs/out.log",
+  "log_date_format": "YYYY-MM-DD HH:mm:ss",
+  "script": "./bin/entry.js",
+  "watch": [
+    "config",
+    "controller",
+    "database",
+    "framework",
+    "routes",
+    "models"
+  ],
+  "ignore_watch": [
+    "node_modules",
+    "logs"
+  ]
+}

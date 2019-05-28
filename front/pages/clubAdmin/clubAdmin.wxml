@@ -1,0 +1,25 @@
+<view>
+    <input type='text' placeholder='请输入要创建的社团名称' bindinput="inputClub" />
+    <button type='primary' bindtap="create"> 新建社团 </button>
+</view>
+
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th main">社团</view>
+    <view class="th setting">设置</view>
+    <view class="th setting">删除</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td main">{{item.name}}</view>
+      <view class="td setting" data-id="{{item.id}}" bindtap="setting">设置</view>
+      <view class="td setting" data-name="{{item.name}}" bindtap="delete">删除</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td main">{{item.name}}</view>
+      <view class="td setting" data-id="{{item.id}}" bindtap="setting">设置</view>
+      <view class="td setting" data-name="{{item.name}}" bindtap="delete">删除</view>
+    </view>
+  </block>
+</view>

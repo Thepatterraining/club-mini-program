@@ -1,0 +1,81 @@
+
+<block wx:if = "{{isLogin}}">
+<navigator url="/pages/userInfo/userInfo">
+<view class="user">
+    <!-- <image src="/assets/banners/banner1.jpg" /> -->
+    <text>{{user.name}}</text>
+</view>
+</navigator>
+</block>
+<block wx:else>
+<navigator url="/pages/login/login">
+<view class="user">
+    <!-- <image src="/assets/banners/banner1.jpg" /> -->
+    <text>登陆/注册</text>
+</view>
+</navigator>
+</block>
+
+<block wx:if="{{user.level == 'ADMIN'}}">
+<navigator url="/pages/clubAdmin/clubAdmin">
+<view>
+    <text >管理社团</text>
+</view>
+</navigator>
+
+<navigator url="/pages/applyClub/applyClub">
+<view>
+    <text >入团审核</text>
+</view>
+</navigator>
+
+<navigator url="/pages/createNew/createNew">
+<view>
+    <text >发布通知</text>
+</view>
+</navigator>
+
+<navigator url="/pages/checkActivity/checkActivity">
+<view>
+    <text >审批活动</text>
+</view>
+</navigator>
+
+<navigator url="/pages/banner/banner">
+<view>
+    <text >设置轮播图</text>
+</view>
+</navigator>
+</block>
+
+<block wx:if="{{user.level == 'MINISTER' || user.level == 'VICE_MINISTER'}}">
+<navigator url="/pages/setClub/setClub?club={{user.club}}">
+<view>
+    <text >管理社团</text>
+</view>
+</navigator>
+
+<navigator url="/pages/applyClub/applyClub">
+<view>
+    <text >入团审核</text>
+</view>
+</navigator>
+
+<navigator url="/pages/activityAdmin/activityAdmin">
+<view>
+    <text >活动管理</text>
+</view>
+</navigator>
+</block>
+
+<block wx:if="{{user.level == 'USER'}}" >
+<navigator url="/pages/club/club">
+<view>
+    <text >我的社团</text>
+</view>
+</navigator>
+</block>
+
+<view bindtap="logout">
+    <text >退出</text>
+</view>

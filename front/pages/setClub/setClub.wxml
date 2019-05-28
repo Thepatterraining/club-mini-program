@@ -1,0 +1,21 @@
+
+<view class="avatar">
+    <image src="http://localhost:3000/{{club.avatar}}" />
+
+    <button bindtap="upload">修改头像</button>
+</view>
+
+
+<view>
+<input type="text" value="{{club.name}}" placeholder="请输入社团名称" bindinput="inputName" />
+</view>
+
+<view>
+<input type="text" value="{{club.desc}}" placeholder="请输入简介" bindinput="inputDesc" />
+</view>
+
+<view>
+<text> 创建时间 {{club.created_at}} </text>
+</view>
+
+<button bindtap="update">更新</button>

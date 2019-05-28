@@ -1,0 +1,19 @@
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th main">活动申请</view>
+    <view class="th setting">操作</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td main">{{item.name}}</view>
+      <view wx:if="{{item.approval == true}}" > 已审批 </view>
+      <view wx:else class="td setting" data-id="{{item.id}}" bindtap="check">审批</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td main">{{item.name}}</view>
+       <view wx:if="{{item.approval == true}}" > 已审批 </view>
+      <view wx:else class="td setting" data-id="{{item.id}}" bindtap="check">审批</view>
+    </view>
+  </block>
+</view>

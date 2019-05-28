@@ -1,0 +1,12 @@
+<view class='container'>
+    <view>
+    <input type='text' placeholder='请输入用户名' bindinput="inputUser" />
+    </view>
+    <view>
+    <input password='true' placeholder='请输入密码' bindinput="inputPwd" />
+    </view>
+    <view>
+    <input password='true' placeholder='再次输入密码' bindinput="inputNewPwd" />
+    </view>
+    <button type='primary' bindtap="register">注册</button>
+</view>

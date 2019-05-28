@@ -1,0 +1,16 @@
+
+<view class='container'>
+    <view class='section'>
+      <input type='text' placeholder='请输入用户名' bindinput="inputUser" />
+    </view>
+    <view class='section'>
+      <input password='true' placeholder='请输入密码' bindinput="inputPwd" />
+    </view>
+    <view class='button'>
+      <button type='primary' bindtap="login" >登录</button>
+    </view>
+    <view class='bottom'>
+        <text bindtap="goRegister" class="register">立即注册</text>
+        <!-- <text bindtap="goForgetPWd" class="forget">忘记密码</text> -->
+    </view>
+</view>

@@ -1,0 +1,23 @@
+
+input {
+    width: 700rpx;
+    border: solid 1rpx #cecece;
+}
+
+
+textarea{
+    width: 700rpx;
+    margin: 20rpx 0;
+    border: solid 1rpx #cecece;
+}
+
+
+button {
+    width: 700rpx;
+}
+
+view {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

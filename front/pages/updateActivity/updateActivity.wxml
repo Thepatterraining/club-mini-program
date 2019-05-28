@@ -1,0 +1,21 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th main">活动名称</view>
+    <view class="th setting">活动状态</view>
+    <view class="th setting">操作</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td main">{{item.name}}</view>
+      <view class="td main" wx:if="{{item.approval}}">已审核</view>
+      <view class="td main" wx:else >未审核</view>
+      <view class="td setting" data-approval="{{item.approval}}" data-id="{{item.id}}" bindtap="update">修改</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td main">{{item.name}}</view>
+      <view class="td main" wx:if="{{item.approval}}">已审核</view>
+      <view class="td main" wx:else >未审核</view>
+      <view class="td setting" data-approval="{{item.approval}}" data-id="{{item.id}}" bindtap="update">修改</view>
+    </view>
+  </block>
+</view>

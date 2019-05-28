@@ -1,0 +1,23 @@
+page {
+    background-color: rgb(253, 252, 252);
+}
+
+view {
+    width: 750rpx;
+    height: 80rpx;
+    margin: 20rpx 0;
+    padding: 0 20rpx;
+    /* line-height: 50%; */
+    /* font-size: 35rpx; */
+    text-align: left;
+    border-top: 3rpx solid #cecece;
+    border-bottom: 3rpx solid #cecece;
+    background-color: #fff;
+  }
+
+view text {
+    padding: 0 20rpx;
+    line-height: 80rpx;
+    font-size: 35rpx;
+    color: rgb(92, 92, 92);
+  }

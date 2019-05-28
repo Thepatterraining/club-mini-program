@@ -1,0 +1,53 @@
+<!-- index.wxml -->
+<!-- 首页轮播图 -->
+<swiper indicator-dots="true" autoplay="true" class="banners">
+    <block wx:for="{{banners}}" wx:key="{{id}}">
+        <swiper-item>
+            <image src="http://localhost:3000/{{item.url}}" />
+        </swiper-item>
+    </block>
+</swiper>
+<!-- <view>
+    <text>{{motto}}</text>
+  </view> -->
+<!-- </view> -->
+<!-- 最新通知 -->
+<view>
+    <view class="title">
+        <text>最新通知</text>
+    </view>
+    <!-- <scroll-view scroll-x="true" bindscrolltolower="right" bindscrolltoupper="left"> -->
+    <view class="news">
+        <view class="new" wx:for="{{news}}" wx:key="{{id}}">
+            <navigator url="/pages/new/new?id={{item.id}}">
+                <text>{{item.title}}</text>
+                <text class="newDate">{{item.created_at}}</text>
+            </navigator>
+        </view>
+    </view>
+    <!-- </scroll-view> -->
+</view>
+<!-- 所有社团活动 -->
+<view class="title">
+    <text>社团风采</text>
+</view>
+<view wx:for="{{listData}}" wx:key="{{id}}" class="activity">
+    <navigator url="/pages/activityInfo/activityInfo?id={{item.id}}">
+        <view class="user">
+            <image src="http://localhost:3000/{{item.user.avatar}}" />
+            <text class="name">{{item.club.name}} - {{item.user.name}}</text>
+        </view>
+        <view class="content">{{item.content}}</view>
+        <view class="imgs">
+            <image wx:for="{{item.activity_imgs}}" wx:key="{{url}}" wx:for-item="img" src="http://localhost:3000/{{img.url}}" lazy-load="true" />
+        </view>
+    </navigator>
+    <view class="icon">
+        <image wx:if="{{item.isLike}}" src="/assets/icon/islike.svg" data-activity="{{item.id}}" bindtap="like" />
+        <image wx:else src="/assets/icon/like.svg" data-activity="{{item.id}}" bindtap="like" />
+        <image src="/assets/icon/message.svg" data-activity="{{item.id}}" bindtap="comment" />
+    </view>
+</view>
+<modal id="modal" hidden="{{hiddenmodalput}}" title="评论" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input type='text' placeholder="请输入评论内容" auto-focus bindinput="inputComment" />
+</modal>

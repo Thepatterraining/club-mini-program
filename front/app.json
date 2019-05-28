@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/active/active",
+    "pages/user/user",
+    "pages/club/club",
+    "pages/register/register",
+    "pages/login/login",
+    "pages/clubAdmin/clubAdmin",
+    "pages/setMinister/setMinister",
+    "pages/createNew/createNew",
+    "pages/checkActivity/checkActivity",
+    "pages/banner/banner",
+    "pages/setClub/setClub",
+    "pages/createActivity/createActivity",
+    "pages/activityAdmin/activityAdmin",
+    "pages/updateActivity/updateActivity",
+    "pages/pushActivity/pushActivity",
+    "pages/deleteActivity/deleteActivity",
+    "pages/activityInfo/activityInfo",
+    "pages/new/new",
+    "pages/applyClub/applyClub",
+    "pages/joinClub/joinClub",
+    "pages/userInfo/userInfo"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "校园社团管理系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/tab-bar/home.png",
+        "selectedIconPath": "assets/tab-bar/home-fill.png"
+      },
+      {
+        "pagePath": "pages/active/active",
+        "text": "动态",
+        "iconPath": "assets/tab-bar/active.png",
+        "selectedIconPath": "assets/tab-bar/active_fill.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我",
+        "iconPath": "assets/tab-bar/icon_signal.png",
+        "selectedIconPath": "assets/tab-bar/icon_signal_fill.png"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

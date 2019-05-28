@@ -1,0 +1,19 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th main">学生</view>
+    <view class="th main">社团</view>
+    <view class="th setting">操作</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td main">{{item.user_info.name}}</view>
+      <view class="td main">{{item.club_info.name}}</view>
+      <view class="td setting" data-id="{{item.id}}" bindtap="check">审核</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td main">{{item.user_info.name}}</view>
+      <view class="td main">{{item.club_info.name}}</view>
+      <view class="td setting" data-id="{{item.id}}" bindtap="check">审核</view>
+    </view>
+  </block>
+</view>

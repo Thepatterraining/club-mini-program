@@ -1,0 +1,11 @@
+
+
+image{
+    width: 350rpx;
+    margin: 0 7rpx;
+    height: 350rpx;
+}
+
+view {
+    margin: 10rpx 0;
+}

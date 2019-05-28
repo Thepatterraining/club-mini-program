@@ -1,0 +1,23 @@
+<navigator url="/pages/createActivity/createActivity">
+<view>
+    <text >创建活动</text>
+</view>
+</navigator>
+
+<navigator url="/pages/updateActivity/updateActivity">
+<view>
+    <text >修改活动</text>
+</view>
+</navigator>
+
+<navigator url="/pages/pushActivity/pushActivity">
+<view>
+    <text >发布活动</text>
+</view>
+</navigator>
+
+<navigator url="/pages/deleteActivity/deleteActivity">
+<view>
+    <text >删除活动</text>
+</view>
+</navigator>

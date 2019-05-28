@@ -1,0 +1,21 @@
+<view>
+    <button type="primary" bindtap="apply" >加入社团</button>
+</view>
+
+
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th main">社团名称</view>
+    <view class="th setting">操作</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td main">{{item.club_info.name}}</view>
+      <view class="td setting" data-id="{{item.id}}" bindtap="delete">退出</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td main">{{item.club_info.name}}</view>
+      <view class="td setting" data-id="{{item.id}}" bindtap="delete">退出</view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,17 @@
+<button type="primary" bindtap="upload">上传轮播图</button>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th main">轮播图</view>
+    <view class="th setting">操作</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td main"><image mode="aspectFit" src="http://localhost:3000/{{item.url}}" /></view>
+      <view class="td setting" data-url="{{item.url}}" bindtap="delete">删除</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td main"><image mode="aspectFit" src="http://localhost:3000/{{item.url}}" /></view>
+      <view class="td setting" data-url="{{item.url}}" bindtap="delete">删除</view>
+    </view>
+  </block>
+</view>

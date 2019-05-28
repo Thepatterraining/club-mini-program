@@ -1,0 +1,9 @@
+
+
+view {
+    padding-left: 10rpx;
+}
+
+.title {
+    text-align: center;
+}

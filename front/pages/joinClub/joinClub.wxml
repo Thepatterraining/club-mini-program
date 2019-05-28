@@ -1,0 +1,16 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th main">社团名称</view>
+    <view class="th setting">操作</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td main">{{item.name}}</view>
+      <view class="td setting" data-id="{{item.id}}" bindtap="apply">加入</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td main">{{item.name}}</view>
+      <view class="td setting" data-id="{{item.id}}" bindtap="apply">加入</view>
+    </view>
+  </block>
+</view>

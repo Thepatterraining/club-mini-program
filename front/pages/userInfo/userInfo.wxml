@@ -1,0 +1,15 @@
+
+<view>
+    <image src="http://localhost:3000/{{user.avatar}}" />
+</view>
+
+<button type="primary" bindtap="upload">上传新头像</button>
+
+
+<view calss="info">
+   用户名：
+   <input type='text' placeholder='请输入用户名' value="{{user.name}}" bindinput="inputUser" />
+</view>
+
+
+<button type='primary' bindtap="update" >修改信息</button>

@@ -1,0 +1,30 @@
+<view wx:if="{{!listData}}">
+    快选择一个心仪的社团加入吧
+</view>
+
+<view wx:for="{{listData}}" wx:key="{{id}}" >
+    <navigator url="/pages/activityInfo/activityInfo?id={{item.id}}">
+        <view class="user">
+            <image src="http://localhost:3000/{{item.user.avatar}}" />
+            <text class="name">{{item.club.name}} - {{item.user.name}}</text>
+        </view>
+
+        <view class="content" >
+            {{item.content}}
+        </view>
+
+        <view class="imgs">
+            <image wx:for="{{item.activity_imgs}}" wx:key="{{url}}" wx:for-item="img" src="http://localhost:3000/{{img.url}}" lazy-load="true" />
+        </view>
+
+        <view class="icon">
+            <image wx:if="{{item.isLike}}" src="/assets/icon/islike.svg" data-activity="{{item.id}}" bindtap="like" />
+            <image wx:else src="/assets/icon/like.svg" data-activity="{{item.id}}" bindtap="like" />
+            <image src="/assets/icon/message.svg" data-activity="{{item.id}}" bindtap="comment" />
+        </view>
+    </navigator>
+</view>
+
+  <modal id="modal" hidden="{{hiddenmodalput}}" title="评论" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+      <input type='text' placeholder="请输入评论内容" auto-focus bindinput="inputComment" /> 
+  </modal>

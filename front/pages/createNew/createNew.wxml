@@ -1,0 +1,13 @@
+
+
+<view>
+<input type="text" placeholder="请输入标题" bindinput="title" />
+</view>
+
+<view>
+<textarea placeholder="请输入内容" auto-heigh="true" maxlength="-1" bindinput="content" />
+</view>
+
+<button type="primary" bindtap="create">
+    发布
+</button>

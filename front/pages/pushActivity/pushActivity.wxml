@@ -1,0 +1,23 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th main">活动名称</view>
+    <view class="th setting">状态</view>
+    <view class="th setting">操作</view>
+  </view>
+  <block wx:for="{{listData}}" wx:key="{{id}}">
+    <block wx:if="{{item.approval}}" >
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td main">{{item.name}}</view>
+      <view class="td main" wx:if="{{item.push}}">已发布</view>
+      <view class="td main" wx:else >未发布</view>
+      <view class="td setting"  data-id="{{item.id}}" bindtap="push">发布</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td main">{{item.name}}</view>
+      <view class="td main" wx:if="{{item.push}}">已发布</view>
+      <view class="td main" wx:else >未发布</view>
+      <view class="td setting" data-id="{{item.id}}" bindtap="push">发布</view>
+    </view>
+    </block>
+  </block>
+</view>

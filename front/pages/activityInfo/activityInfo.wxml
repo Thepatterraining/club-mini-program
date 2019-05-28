@@ -1,0 +1,38 @@
+<view class="user">
+    <image src="http://localhost:3000/{{item.user.avatar}}" />
+    <text class="name">{{item.club.name}} - {{item.user.name}}</text>
+</view>
+<view class="content">{{item.content}}</view>
+<view class="imgs">
+    <image wx:for="{{item.activity_imgs}}" wx:key="{{url}}" wx:for-item="img" src="http://localhost:3000/{{img.url}}" lazy-load="true" />
+</view>
+<view class="icon">
+    <image wx:if="{{item.isLike}}" src="/assets/icon/islike.svg" data-activity="{{item.id}}" bindtap="like" />
+    <image wx:else src="/assets/icon/like.svg" data-activity="{{item.id}}" bindtap="like" />
+    <image src="/assets/icon/message.svg" data-activity="{{item.id}}" data-pid="0" bindtap="reply" />
+</view>
+<view class="comment-block">
+    <view class="comment-title">
+        <text>评论</text>
+        <text class="like-count">点赞数：{{item.like}}</text>
+    </view>
+    <view wx:for="{{listData}}" wx:key="{{comment.id}}" wx:for-item="comment" class="comment">
+        <view class="user">
+            <image src="http://localhost:3000/{{comment.user.avatar}}" />
+            <text class="name">{{comment.user.name}}</text>
+        </view>
+        <view class="comment-content">{{comment.content}}</view>
+        <view class="comment-bottom">
+            <text class="date">{{comment.created_at}}</text>
+            <!-- <text class="reply" bindtap="reply" data-activity="{{item.id}}" data-pid="{{comment.id}}" >
+                回复
+            </text> -->
+            <text wx:if="{{comment.delete}}" class="delete" data-id="{{comment.id}}" bindtap="delete">
+                删除
+            </text>
+        </view>
+    </view>
+</view>
+<modal id="modal" hidden="{{hiddenmodalput}}" title="评论" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input type='text' placeholder="请输入评论内容" auto-focus bindinput="inputComment" />
+</modal>

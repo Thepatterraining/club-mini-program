@@ -1,0 +1,24 @@
+
+
+page {
+    background-color: #f8f8f8;
+}
+
+
+view {
+    margin-bottom: 10rpx;
+    background-color: #fff;
+    color: #3c3c3c;
+    height: 60rpx;
+    font-size: 40rpx;
+    border-top: 3rpx solid #cecece;
+    border-bottom: 3rpx solid #cecece;
+}
+
+image {
+    height: 200rpx;
+}
+
+.avatar {
+    height: 300rpx;
+}

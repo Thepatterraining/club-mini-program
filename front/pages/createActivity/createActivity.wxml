@@ -1,0 +1,58 @@
+<view>
+<text >活动名称：</text>
+<input type="text" value="{{activity.name}}" placeholder="请输入活动名称" bindinput="inputName" disabled="{{activity.approval}}" />
+</view>
+
+<view>
+    <text >活动地点：</text>
+<input type="text" value="{{activity.place}}" placeholder="请输入活动地点" bindinput="inputPlace" disabled="{{activity.approval}}" />
+</view>
+
+<view>
+    <text >活动经费：</text>
+<input type="number" value="{{activity.amount}}" placeholder="请输入预计经费" bindinput="inputAmount" disabled="{{activity.approval}}" />
+</view>
+
+<view>
+    <text >活动人数：</text>
+<input type="number" value="{{activity.number}}" placeholder="请输入人数" bindinput="inputNumber" disabled="{{activity.approval}}" />
+</view>
+
+<view>
+<picker mode="date" value="{{activity.startDate}}" bindchange="changeStartDate" disabled="{{activity.approval}}">
+    <view>开始日期: {{activity.startDate}}</view>
+</picker>
+</view>
+
+<view>
+<picker mode="date" value="{{activity.endDate}}" bindchange="changeEndDate" disabled="{{activity.approval}}">
+    <view>结束日期: {{activity.endDate}}</view>
+</picker>
+</view>
+
+<view>
+    <text >活动内容：</text>
+<textarea value="{{activity.content}}" placeholder="请输入活动内容" auto-heigh="true" maxlength="-1" bindinput="inputContent" />
+</view>
+
+<block wx:for="{{imgs}}" wx:key="{{item}}">
+    <image mode="aspectFit" src="http://localhost:3000/{{item}}" />
+</block>
+
+<view >
+    <button bindtap="upload">
+        上传图片
+    </button>
+</view>
+
+
+<view wx:if="{{update}}">
+    <button type="primary" bindtap="updateHandle">
+    修改活动
+</button>
+</view>
+<view wx:else >
+<button type="primary" bindtap="create">
+    申请活动
+</button>
+</view>

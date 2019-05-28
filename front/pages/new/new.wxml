@@ -1,0 +1,11 @@
+
+
+<view class="title">
+    <text >{{new.title}}</text>
+</view>
+
+<view >
+    <text >
+        {{new.content}}
+    </text>
+</view>

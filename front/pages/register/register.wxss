@@ -1,0 +1,22 @@
+page{
+    background-color: #854292;
+}
+
+  input{
+    background-color: #999393;
+    /* border: 1px solid #ccc; */
+    width: 600rpx;
+    height: 70rpx;
+    margin: 10rpx 0;
+  }
+
+  button{
+    margin: 10rpx 0;
+      width: 600rpx;
+      height: 70rpx;
+      line-height: 70rpx;
+  }
+    text{
+    font-size: 35rpx;
+    color: #aaa;
+  }
